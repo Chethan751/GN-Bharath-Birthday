@@ -1,0 +1,19 @@
+# Dependencies & Build Outputs
+node_modules/
+dist/
+build/
+.vite/
+
+# Local Environment Secrets (keep .env.example tracked)
+.env
+.env.*
+!.env.example
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+
+# OS & Deployment Artifacts
+.DS_Store
+Thumbs.db
+.vercel/
+*.log

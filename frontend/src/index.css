@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+:root {
+  --gold-light: #fff3c4;
+  --gold-mid: #e6be5a;
+  --gold-deep: #b8860b;
+  --obsidian: #060608;
+  --obsidian-card: rgba(14, 13, 18, 0.78);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #060608;
+    color: #f5ecd7;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    overflow-x: hidden;
+    background: radial-gradient(circle at 50% 0%, #17120a 0%, #060608 55%, #030305 100%);
+    min-height: 100dvh;
+  }
+}
+
+.font-serif-luxury {
+  font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+}
+
+.font-script-gold {
+  font-family: 'Great Vibes', 'Cormorant Garamond', cursive;
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #fff4cc 0%, #f4d06f 28%, #d4af37 58%, #f8e39a 82%, #aa7c11 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gold-border-glow {
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  box-shadow:
+    0 0 28px rgba(212, 175, 55, 0.12),
+    inset 0 0 18px rgba(212, 175, 55, 0.06);
+}
+
+.gold-pill-btn {
+  background: linear-gradient(135deg, #f8e18e 0%, #d4af37 50%, #a67c10 100%);
+  color: #0c0904;
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.65);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, filter 0.22s ease;
+}
+
+.gold-pill-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  filter: brightness(1.06);
+  box-shadow: 0 12px 36px rgba(212, 175, 55, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.8);
+}
+
+.gold-pill-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.luxury-panel {
+  background: linear-gradient(160deg, rgba(20, 18, 25, 0.88) 0%, rgba(10, 9, 13, 0.92) 100%);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 232, 165, 0.12);
+}
+
+@keyframes shake-gold-red {
+  0%, 100% { transform: translateX(0); }
+  15% { transform: translateX(-10px); }
+  30% { transform: translateX(9px); }
+  45% { transform: translateX(-7px); }
+  60% { transform: translateX(6px); }
+  75% { transform: translateX(-4px); }
+}
+
+.animate-shake-error {
+  animation: shake-gold-red 0.52s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+/* Custom sleek gold scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #070709;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.32);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.55);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
